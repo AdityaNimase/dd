@@ -94,7 +94,7 @@ plot_history(history)
 loss, accuracy = model.evaluate(X_test_pad, y_test)
 print(f"\nFinal Test Accuracy: {accuracy:.4f}")
 
-# 🔍 Confusion matrix & classification report
+# Confusion matrix & classification report
 y_pred = (model.predict(X_test_pad) > 0.5).astype("int32")
 
 cm = confusion_matrix(y_test, y_pred)
