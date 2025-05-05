@@ -68,7 +68,7 @@ model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy']
 # Train the model
 history = model.fit(X_train_pad, y_train, epochs=10, validation_data=(X_test_pad, y_test), batch_size=32)
 
-# 📈 Accuracy/Loss plots
+# Accuracy/Loss plots
 def plot_history(history):
     plt.figure(figsize=(12, 5))
     
@@ -92,7 +92,7 @@ plot_history(history)
 
 # Evaluate
 loss, accuracy = model.evaluate(X_test_pad, y_test)
-print(f"\n✅ Final Test Accuracy: {accuracy:.4f}")
+print(f"\nFinal Test Accuracy: {accuracy:.4f}")
 
 # 🔍 Confusion matrix & classification report
 y_pred = (model.predict(X_test_pad) > 0.5).astype("int32")
